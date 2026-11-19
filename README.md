@@ -4,7 +4,7 @@ Site for A1Soft, an international software and AI team. The first screen follows
 
 ## Living graphic
 
-The signal loop sits full-bleed behind the page. It plays forward then reverse so the cut does not jump. Menu and type are HTML over it; the page scrolls, the header stays transparent. `?visual=static` and `prefers-reduced-motion` freeze the poster.
+The signal loop sits full-bleed behind the page. Menu and type are HTML over it; the page scrolls, the header stays transparent. `?visual=static` and `prefers-reduced-motion` freeze the poster.
 
 Language switch: **RU / EN**. It changes every label on the page and the document language.
 

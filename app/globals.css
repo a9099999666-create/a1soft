@@ -174,18 +174,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 42% 58%;
-  transform: translateZ(0);
-  backface-visibility: hidden;
-}
-
-video.backdrop-media {
-  opacity: 0;
-  transition: opacity 420ms ease;
-}
-
-video.backdrop-media.is-ready {
-  opacity: 1;
+  object-position: 42% 62%;
 }
 
 .backdrop-veil {
@@ -745,11 +734,10 @@ video.backdrop-media.is-ready {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  video.backdrop-media {
+  .backdrop video {
     display: none;
   }
 
-  video.backdrop-media,
   .masthead {
     transition: none;
   }
