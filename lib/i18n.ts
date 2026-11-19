@@ -7,7 +7,7 @@ export const copy = {
     contactNav: "Контакты",
     langGroup: "Язык",
     headline: ["Сложное должно", "быть простым."],
-    philosophyLabel: "Философия A1Soft",
+    philosophyLabel: "Философия",
     philosophy: ["Разбираемся в сложном,", "пока решение не станет ясным."],
     aboutTitle: "О компании",
     about: [
@@ -16,11 +16,11 @@ export const copy = {
       "Проверяем идеи на прототипах и доводим их до решений, которыми просто пользоваться.",
     ],
     contactTitle: "Контакты",
-    contactLead: "Связаться с A1Soft.",
-    contact: [
-      "База команды — Астана, Казахстан.",
-      "ТОО «A 1 Soft».",
-      "БИН 261140006939.",
+    contactLead: "Связаться с A1Soft",
+    contactFields: [
+      { label: "База", value: "Астана, Казахстан" },
+      { label: "Компания", value: "ТОО «A 1 Soft»" },
+      { label: "БИН", value: "261140006939" },
     ],
     footer: "ТОО «A 1 Soft» · Астана",
     visualLabel: "Схождение сигнала",
@@ -31,7 +31,7 @@ export const copy = {
     contactNav: "Contact",
     langGroup: "Language",
     headline: ["The complex", "should be simple."],
-    philosophyLabel: "The A1Soft philosophy",
+    philosophyLabel: "Philosophy",
     philosophy: ["We work through complexity", "until the solution is clear."],
     aboutTitle: "About",
     about: [
@@ -40,11 +40,11 @@ export const copy = {
       "We test ideas through prototypes and turn them into solutions that are easy to use.",
     ],
     contactTitle: "Contact",
-    contactLead: "Contact A1Soft.",
-    contact: [
-      "Team base — Astana, Kazakhstan.",
-      "A 1 Soft LLP.",
-      "Business ID 261140006939.",
+    contactLead: "Contact A1Soft",
+    contactFields: [
+      { label: "Base", value: "Astana, Kazakhstan" },
+      { label: "Company", value: "A 1 Soft LLP" },
+      { label: "ID", value: "261140006939" },
     ],
     footer: "A 1 Soft LLP · Astana",
     visualLabel: "Signal convergence",
