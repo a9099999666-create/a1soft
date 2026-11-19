@@ -222,14 +222,78 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  height: 28px;
+  height: 34px;
+}
+
+.mark {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+}
+
+.mark-orbit {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 210deg,
+    transparent 0 62%,
+    rgba(94, 212, 218, 0) 68%,
+    #7ef0f6 82%,
+    rgba(94, 212, 218, 0) 92%,
+    transparent 100%
+  );
+  mask: radial-gradient(farthest-side, transparent calc(100% - 1.4px), #000 calc(100% - 1px));
+  animation: orbit 5.5s linear infinite;
+  opacity: 0.7;
+}
+
+.mark-core {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
 }
 
 .brand-mark {
   display: block;
-  height: 26px !important;
+  height: 22px !important;
   width: auto !important;
   max-width: none;
+  filter: drop-shadow(0 0 6px rgba(94, 212, 218, 0.28));
+  animation: mark-breathe 3.6s ease-in-out infinite;
+}
+
+.mark-shine {
+  position: absolute;
+  inset: -30%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(126, 240, 246, 0.7) 50%,
+    transparent 58%
+  );
+  transform: translateX(-130%);
+  animation: shine 4.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.brand:hover .mark-orbit {
+  opacity: 1;
+  animation-duration: 1.4s;
+}
+
+.brand:hover .brand-mark {
+  filter: drop-shadow(0 0 12px rgba(94, 212, 218, 0.85));
+}
+
+.brand:hover .mark-shine {
+  animation: shine 0.9s ease-in-out;
 }
 
 .brand-word {
@@ -424,6 +488,105 @@
   color: #f4f0e6;
 }
 
+.channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.channel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 46px;
+  padding: 0 12px 0 10px;
+  overflow: hidden;
+  color: rgba(246, 242, 232, 0.82);
+  border: 1px solid rgba(255, 254, 243, 0.12);
+  border-radius: 999px;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background 180ms ease;
+}
+
+.channel-orb {
+  position: absolute;
+  inset: auto auto -18px -12px;
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(94, 212, 218, 0.28) 0%, transparent 68%);
+  opacity: 0;
+  transform: scale(0.6);
+  transition:
+    opacity 220ms ease,
+    transform 220ms ease;
+  pointer-events: none;
+}
+
+.channel svg {
+  position: relative;
+  z-index: 1;
+  width: 22px;
+  height: 22px;
+  flex: none;
+}
+
+.icon-path {
+  stroke-dasharray: 64;
+  stroke-dashoffset: 0;
+  transition:
+    stroke 180ms ease,
+    filter 180ms ease;
+}
+
+.channel-name {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.channel:hover,
+.channel:focus-visible {
+  color: #ecfeff;
+  background: rgba(94, 212, 218, 0.08);
+  border-color: rgba(126, 240, 246, 0.55);
+  box-shadow:
+    0 0 0 1px rgba(94, 212, 218, 0.12),
+    0 0 24px rgba(94, 212, 218, 0.18);
+}
+
+.channel:hover .channel-orb,
+.channel:focus-visible .channel-orb {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.channel:hover .icon-path,
+.channel:focus-visible .icon-path {
+  stroke: #7ef0f6;
+  filter: drop-shadow(0 0 6px rgba(126, 240, 246, 0.9));
+  animation: draw 0.9s ease;
+}
+
+.channel:hover .icon-path.delay,
+.channel:focus-visible .icon-path.delay {
+  animation-delay: 0.08s;
+}
+
+.channel:focus-visible {
+  outline: 1px solid rgba(94, 212, 218, 0.8);
+  outline-offset: 3px;
+}
+
 #about,
 #contact {
   scroll-margin-top: 88px;
@@ -480,6 +643,41 @@
   }
 }
 
+@keyframes orbit {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-130%);
+  }
+  18%,
+  100% {
+    transform: translateX(130%);
+  }
+}
+
+@keyframes mark-breathe {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 4px rgba(94, 212, 218, 0.2));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(94, 212, 218, 0.7));
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 64;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .backdrop video {
     display: none;
@@ -487,5 +685,13 @@
 
   .masthead {
     transition: none;
+  }
+
+  .mark-orbit,
+  .mark-shine,
+  .brand-mark,
+  .channel:hover .icon-path,
+  .channel:focus-visible .icon-path {
+    animation: none;
   }
 }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { Backdrop } from "@/components/backdrop";
+import { Channels } from "@/components/channels";
 import { copy, type Lang } from "@/lib/i18n";
 
 type HomePageProps = {
@@ -45,15 +46,21 @@ export function HomePage({ visualStatic }: HomePageProps) {
 
         <header className={scrolled ? "masthead is-scrolled" : "masthead"}>
           <a className="brand" href="#top" aria-label="A1Soft">
-            <Image
-              className="brand-mark"
-              src="/brand/a1-mark.png"
-              alt=""
-              width={120}
-              height={92}
-              unoptimized
-              priority
-            />
+            <span className="mark">
+              <span className="mark-orbit" aria-hidden />
+              <span className="mark-core">
+                <Image
+                  className="brand-mark"
+                  src="/brand/a1-mark.png"
+                  alt=""
+                  width={120}
+                  height={92}
+                  unoptimized
+                  priority
+                />
+                <span className="mark-shine" aria-hidden />
+              </span>
+            </span>
             <span className="brand-word" aria-hidden>
               a<span>1</span>soft
             </span>
@@ -119,6 +126,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
                   </div>
                 ))}
               </dl>
+              <Channels lang={lang} />
             </aside>
           </div>
           <footer className="colophon">{t.footer}</footer>
