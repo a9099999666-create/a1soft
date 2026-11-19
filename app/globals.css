@@ -200,7 +200,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 72px;
+  height: 76px;
   padding: 0 var(--pad);
   border-bottom: 1px solid rgba(255, 254, 243, 0.06);
   background: linear-gradient(
@@ -223,14 +223,14 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
-  height: 34px;
+  gap: 13px;
+  height: 36px;
 }
 
 .mark {
   position: relative;
-  width: 34px;
-  height: 34px;
+  width: 36px;
+  height: 36px;
   display: grid;
   place-items: center;
 }
@@ -257,14 +257,14 @@
   z-index: 1;
   display: grid;
   place-items: center;
-  width: 26px;
-  height: 26px;
+  width: 27px;
+  height: 27px;
   overflow: hidden;
 }
 
 .brand-mark {
   display: block;
-  height: 22px !important;
+  height: 23px !important;
   width: auto !important;
   max-width: none;
   filter: drop-shadow(0 0 5px rgba(94, 212, 218, 0.18));
@@ -299,7 +299,7 @@
 }
 
 .brand-word {
-  font-size: 19px;
+  font-size: 20px;
   font-weight: 430;
   letter-spacing: -0.05em;
   line-height: 1;
@@ -314,8 +314,8 @@
 .nav {
   display: flex;
   align-items: center;
-  gap: 28px;
-  font-size: 13px;
+  gap: 29px;
+  font-size: 14px;
   font-weight: 400;
   letter-spacing: 0.06em;
   color: var(--ink-soft);
@@ -368,9 +368,9 @@
 .lang {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 9px;
   margin-left: 8px;
-  padding-left: 20px;
+  padding-left: 21px;
   border-left: 1px solid rgba(255, 254, 243, 0.1);
   white-space: nowrap;
 }
@@ -380,7 +380,7 @@
 }
 
 .hero-screen {
-  min-height: calc(100svh - 72px);
+  min-height: calc(100svh - 76px);
   display: flex;
   flex-direction: column;
 }
@@ -637,7 +637,7 @@
 
 #about,
 #contact {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 92px;
 }
 
 .colophon {
@@ -687,10 +687,10 @@
 @media (max-width: 560px) {
   .masthead {
     height: auto;
-    min-height: 64px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    gap: 12px;
+    min-height: 67px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    gap: 13px;
   }
 
   .nav {
