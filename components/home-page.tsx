@@ -39,7 +39,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
   return (
     <>
       <Backdrop live={live} label={t.visualLabel} />
-      <div className="site">
+      <div className={live ? "site is-live" : "site"}>
         <a className="skip" href="#about">
           {t.skip}
         </a>
@@ -92,7 +92,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
           <h1 className="headline">
             {t.headline[0]}
             <br />
-            {t.headline[1]}
+            {lineWithDot(t.headline[1])}
           </h1>
           <div className="hero-space" />
           <div className="philosophy" aria-labelledby="philosophy-label">
@@ -124,6 +124,16 @@ export function HomePage({ visualStatic }: HomePageProps) {
           <footer className="colophon">{t.footer}</footer>
         </section>
       </div>
+    </>
+  );
+}
+
+function lineWithDot(line: string) {
+  if (!line.endsWith(".")) return line;
+  return (
+    <>
+      {line.slice(0, -1)}
+      <span className="headline-dot">.</span>
     </>
   );
 }
