@@ -185,11 +185,11 @@
     radial-gradient(48% 42% at 78% 48%, rgba(94, 212, 218, 0.06) 0%, transparent 70%),
     linear-gradient(
       180deg,
-      rgba(6, 17, 27, 0.3) 0%,
-      rgba(6, 17, 27, 0.04) 30%,
-      rgba(6, 17, 27, 0) 52%,
-      rgba(6, 17, 27, 0.16) 78%,
-      rgba(6, 14, 22, 0.32) 100%
+      rgba(6, 17, 27, 0.32) 0%,
+      rgba(6, 17, 27, 0.05) 30%,
+      rgba(6, 17, 27, 0.02) 52%,
+      rgba(6, 17, 27, 0.28) 78%,
+      rgba(6, 14, 22, 0.48) 100%
     );
 }
 
@@ -215,9 +215,9 @@
 }
 
 .masthead.is-scrolled {
-  background: rgba(6, 17, 27, 0.38);
-  border-bottom-color: rgba(255, 254, 243, 0.08);
-  backdrop-filter: blur(16px);
+  background: rgba(6, 17, 27, 0.62);
+  border-bottom-color: rgba(255, 254, 243, 0.12);
+  backdrop-filter: blur(18px);
 }
 
 .brand {
@@ -324,7 +324,7 @@
 .nav a,
 .lang button {
   position: relative;
-  color: rgba(246, 242, 232, 0.62);
+  color: rgba(246, 242, 232, 0.7);
   transition: color 160ms ease;
 }
 
@@ -404,7 +404,7 @@
 }
 
 .philosophy {
-  padding: 0 var(--pad) 56px;
+  padding: 0 var(--pad) 64px;
   max-width: 36rem;
 }
 
@@ -435,7 +435,7 @@
   letter-spacing: -0.02em;
   font-weight: 400;
   font-variation-settings: "wght" 380;
-  color: rgba(247, 243, 234, 0.82);
+  color: rgba(247, 243, 234, 0.9);
 }
 
 .hero-screen,
@@ -445,22 +445,23 @@
 }
 
 .sheet {
+  margin-top: -28px;
   background: linear-gradient(
     180deg,
-    rgba(6, 14, 22, 0) 0%,
-    rgba(6, 14, 22, 0.14) 28%,
-    rgba(6, 14, 22, 0.26) 100%
+    rgba(6, 14, 22, 0.38) 0%,
+    rgba(6, 14, 22, 0.7) 22%,
+    rgba(6, 14, 22, 0.82) 100%
   );
-  backdrop-filter: blur(7px) saturate(1.05);
-  -webkit-mask-image: linear-gradient(180deg, transparent 0, #000 56px);
-  mask-image: linear-gradient(180deg, transparent 0, #000 56px);
+  backdrop-filter: blur(20px) saturate(1.04);
+  border-top: 1px solid rgba(255, 254, 243, 0.1);
 }
 
 .sheet-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(260px, 0.7fr);
-  gap: clamp(40px, 8vw, 112px);
-  padding: 56px var(--pad) 48px;
+  grid-template-columns: minmax(0, 1.35fr) minmax(260px, 0.72fr);
+  align-items: start;
+  gap: clamp(48px, 8vw, 104px);
+  padding: 72px var(--pad) 40px;
 }
 
 .sheet h2 {
@@ -472,7 +473,7 @@
   font-weight: 500;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: rgba(246, 242, 232, 0.42);
+  color: rgba(246, 242, 232, 0.5);
 }
 
 .sheet h2::before {
@@ -489,13 +490,11 @@
   font-size: clamp(17px, 1.45vw, 20px);
   line-height: 1.55;
   letter-spacing: -0.01em;
-  color: rgba(232, 228, 218, 0.82);
-  text-shadow: 0 6px 22px rgba(6, 17, 27, 0.35);
+  color: rgba(232, 228, 218, 0.9);
 }
 
 .sheet article p:first-of-type {
-  font-size: clamp(18px, 1.6vw, 22px);
-  color: rgba(244, 240, 230, 0.9);
+  color: #f4f0e6;
 }
 
 .sheet article p:last-child {
@@ -503,17 +502,17 @@
 }
 
 #contact {
-  padding-left: clamp(0px, 2vw, 8px);
+  padding-left: clamp(16px, 3vw, 28px);
+  border-left: 1px solid rgba(255, 254, 243, 0.1);
 }
 
 .contact-lead {
-  margin: 0 0 8px;
-  font-size: clamp(26px, 2.4vw, 34px);
-  line-height: 1.2;
-  letter-spacing: -0.035em;
-  font-variation-settings: "wght" 360;
-  color: rgba(247, 243, 234, 0.92);
-  text-shadow: 0 8px 24px rgba(6, 17, 27, 0.3);
+  margin: 0 0 4px;
+  font-size: clamp(20px, 1.7vw, 24px);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  font-variation-settings: "wght" 380;
+  color: #f4f0e6;
 }
 
 .channels {
@@ -533,8 +532,8 @@
   min-height: 58px;
   padding: 0 2px;
   overflow: hidden;
-  color: rgba(246, 242, 232, 0.72);
-  border-bottom: 1px solid rgba(255, 254, 243, 0.08);
+  color: rgba(246, 242, 232, 0.8);
+  border-bottom: 1px solid rgba(255, 254, 243, 0.1);
   transition:
     color 180ms ease,
     border-color 180ms ease,
@@ -577,7 +576,7 @@
   z-index: 1;
   flex: 1;
   font-size: 13px;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -599,8 +598,8 @@
   color: rgba(236, 254, 255, 0.95);
   background: linear-gradient(
     90deg,
-    rgba(94, 212, 218, 0.05),
-    rgba(94, 212, 218, 0.01) 48%,
+    rgba(94, 212, 218, 0.08),
+    rgba(94, 212, 218, 0.02) 52%,
     transparent
   );
   border-bottom-color: rgba(126, 240, 246, 0.28);
@@ -642,11 +641,13 @@
 }
 
 .colophon {
-  padding: 8px var(--pad) 40px;
-  font-size: 12px;
+  margin: 8px var(--pad) 0;
+  padding: 22px 0 36px;
+  border-top: 1px solid rgba(255, 254, 243, 0.08);
+  font-size: 11px;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: rgba(154, 163, 168, 0.55);
+  color: rgba(154, 163, 168, 0.62);
 }
 
 @media (max-width: 860px) {
@@ -662,14 +663,15 @@
 
   .sheet-grid {
     grid-template-columns: 1fr;
-    padding-top: 40px;
-    gap: 48px;
+    padding-top: 56px;
+    gap: 52px;
   }
 
   #contact {
     padding-left: 0;
-    padding-top: 12px;
-    border-top: 1px solid rgba(255, 254, 243, 0.07);
+    padding-top: 20px;
+    border-left: 0;
+    border-top: 1px solid rgba(255, 254, 243, 0.1);
   }
 
   .headline {
@@ -678,7 +680,7 @@
   }
 
   .contact-lead {
-    font-size: 26px;
+    font-size: 22px;
   }
 }
 
