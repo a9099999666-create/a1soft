@@ -298,15 +298,7 @@
 
 .philosophy {
   background: transparent;
-  padding: 0 0 36px;
-}
-
-.philosophy-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(220px, 0.8fr);
-  align-items: end;
-  gap: 24px;
-  padding: 0 var(--pad);
+  padding: 0 var(--pad) 36px;
 }
 
 .eyebrow {
@@ -325,14 +317,6 @@
   font-weight: 400;
   font-variation-settings: "wght" 380;
   color: #f4f0e6;
-}
-
-.philosophy-mini {
-  display: block;
-  width: min(400px, 100%);
-  height: auto;
-  justify-self: end;
-  margin-top: 8px;
 }
 
 .hero-screen,
@@ -403,16 +387,6 @@
     padding-bottom: 12px;
   }
 
-  .philosophy-grid {
-    grid-template-columns: 1fr;
-    padding-top: 28px;
-    gap: 28px;
-  }
-
-  .philosophy-mini {
-    justify-self: start;
-    width: min(320px, 100%);
-  }
 }
 
 @media (max-width: 520px) {

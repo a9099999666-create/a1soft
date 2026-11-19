@@ -81,27 +81,14 @@ export function HomePage({ visualStatic }: HomePageProps) {
         </h1>
         <div className="hero-space" />
         <div className="philosophy" aria-labelledby="philosophy-label">
-          <div className="philosophy-grid">
-            <div className="philosophy-copy">
-              <p id="philosophy-label" className="eyebrow">
-                {t.philosophyLabel}
-              </p>
-              <p className="philosophy-text">
-                {t.philosophy[0]}
-                <br />
-                {t.philosophy[1]}
-              </p>
-            </div>
-            <Image
-              className="philosophy-mini"
-              src="/visuals/philosophy-mini.png"
-              alt=""
-              width={408}
-              height={126}
-              unoptimized
-              draggable={false}
-            />
-          </div>
+          <p id="philosophy-label" className="eyebrow">
+            {t.philosophyLabel}
+          </p>
+          <p className="philosophy-text">
+            {t.philosophy[0]}
+            <br />
+            {t.philosophy[1]}
+          </p>
         </div>
       </section>
 
