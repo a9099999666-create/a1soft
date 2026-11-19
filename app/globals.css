@@ -548,7 +548,12 @@
   color: rgba(232, 228, 218, 0.9);
 }
 
-.sheet article p:first-of-type {
+.about-lead {
+  margin: 0 0 0.7em;
+  font-size: clamp(20px, 1.7vw, 24px);
+  line-height: 1.3;
+  letter-spacing: -0.03em;
+  font-variation-settings: "wght" 380;
   color: #f4f0e6;
 }
 
@@ -760,6 +765,7 @@
     padding-top: 28px;
   }
 
+  .about-lead,
   .contact-lead {
     font-size: 22px;
   }

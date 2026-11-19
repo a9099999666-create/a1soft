@@ -111,6 +111,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
           <div className="sheet-grid">
             <article id="about" aria-labelledby="about-title">
               <h2 id="about-title">{t.aboutTitle}</h2>
+              <p className="about-lead">{t.aboutLead}</p>
               {t.about.map((p) => (
                 <p key={p}>{p}</p>
               ))}
