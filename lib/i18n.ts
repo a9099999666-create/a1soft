@@ -16,13 +16,8 @@ export const copy = {
       "Проверяем идеи на прототипах и доводим их до решений, которыми просто пользоваться.",
     ],
     contactTitle: "Контакты",
-    contactLead: "Связаться с A1Soft",
-    contactFields: [
-      { label: "База", value: "Астана, Казахстан" },
-      { label: "Компания", value: "ТОО «A 1 Soft»" },
-      { label: "БИН", value: "261140006939" },
-    ],
-    footer: "ТОО «A 1 Soft» · Астана",
+    contactLead: "Напишите нам",
+    footer: "A1Soft",
     visualLabel: "Схождение сигнала",
   },
   en: {
@@ -40,13 +35,8 @@ export const copy = {
       "We test ideas through prototypes and turn them into solutions that are easy to use.",
     ],
     contactTitle: "Contact",
-    contactLead: "Contact A1Soft",
-    contactFields: [
-      { label: "Base", value: "Astana, Kazakhstan" },
-      { label: "Company", value: "A 1 Soft LLP" },
-      { label: "ID", value: "261140006939" },
-    ],
-    footer: "A 1 Soft LLP · Astana",
+    contactLead: "Write to us",
+    footer: "A1Soft",
     visualLabel: "Signal convergence",
   },
 } as const;

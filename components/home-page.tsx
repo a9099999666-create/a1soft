@@ -118,14 +118,6 @@ export function HomePage({ visualStatic }: HomePageProps) {
             <aside id="contact" aria-labelledby="contact-title">
               <h2 id="contact-title">{t.contactTitle}</h2>
               <p className="contact-lead">{t.contactLead}</p>
-              <dl className="facts">
-                {t.contactFields.map((field) => (
-                  <div key={field.label} className="fact">
-                    <dt>{field.label}</dt>
-                    <dd>{field.value}</dd>
-                  </div>
-                ))}
-              </dl>
               <Channels lang={lang} />
             </aside>
           </div>

@@ -20,6 +20,7 @@ export function Channels({ lang }: { lang: Lang }) {
               <span className="channel-orb" aria-hidden />
               <ChannelIcon id={channel.id} />
               <span className="channel-name">{channel[lang]}</span>
+              <span className="channel-trail" aria-hidden />
             </a>
           </li>
         );

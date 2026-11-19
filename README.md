@@ -8,7 +8,7 @@ The signal loop sits full-bleed behind the page. Menu and type are HTML over it;
 
 Language switch: **RU / EN**. It changes every label on the page and the document language.
 
-Contact pills (Telegram, WhatsApp, Max, email) sit under the facts. Hover draws the stroke in the cyan filament and lights a glow. Handles live in `lib/contacts.ts`.
+Telegram, WhatsApp, Max, and email sit in the contact column. Hover draws the stroke in the cyan filament and lights a glow. Handles live in `lib/contacts.ts`.
 
 ## Local
 
