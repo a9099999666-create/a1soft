@@ -324,6 +324,7 @@
 .nav a,
 .lang button {
   position: relative;
+  white-space: nowrap;
   color: rgba(246, 242, 232, 0.7);
   transition: color 160ms ease;
 }
@@ -690,11 +691,19 @@
     min-height: 67px;
     padding-top: 13px;
     padding-bottom: 13px;
-    gap: 13px;
+    gap: 10px;
+  }
+
+  .brand {
+    gap: 10px;
+  }
+
+  .brand-word {
+    font-size: 18px;
   }
 
   .nav {
-    gap: 14px;
+    gap: 12px;
   }
 }
 
