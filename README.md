@@ -4,7 +4,7 @@ Site for A1Soft, an international software and AI team. The first screen follows
 
 ## Living graphic
 
-HTML text sits on top of a static poster cropped from the design reference. When motion is allowed, a muted looping video plays in that same frame. `?visual=static` and `prefers-reduced-motion` keep the poster still.
+The signal loop sits full-bleed behind the page. Menu and type are HTML over it; the page scrolls, the header stays transparent. `?visual=static` and `prefers-reduced-motion` freeze the poster.
 
 Language switch: **RU / EN**. It changes every label on the page and the document language.
 
