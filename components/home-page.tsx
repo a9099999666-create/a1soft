@@ -13,9 +13,15 @@ type HomePageProps = {
 export function HomePage({ visualStatic }: HomePageProps) {
   const [lang, setLang] = useState<Lang>("ru");
   const [reduceMotion, setReduceMotion] = useState(false);
+  const [motionReady, setMotionReady] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const t = copy[lang];
-  const live = !visualStatic && !reduceMotion;
+  const live = motionReady && !visualStatic && !reduceMotion;
+
+  useEffect(() => {
+    const saved = window.localStorage.getItem("a1soft-lang");
+    if (saved === "en" || saved === "ru") setLang(saved);
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = lang;
@@ -23,7 +29,10 @@ export function HomePage({ visualStatic }: HomePageProps) {
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
-    const apply = () => setReduceMotion(mq.matches);
+    const apply = () => {
+      setReduceMotion(mq.matches);
+      setMotionReady(true);
+    };
     apply();
     mq.addEventListener("change", apply);
     return () => mq.removeEventListener("change", apply);
@@ -35,6 +44,11 @@ export function HomePage({ visualStatic }: HomePageProps) {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  function chooseLang(next: Lang) {
+    setLang(next);
+    window.localStorage.setItem("a1soft-lang", next);
+  }
 
   return (
     <>
@@ -72,7 +86,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
               <button
                 type="button"
                 aria-pressed={lang === "ru"}
-                onClick={() => setLang("ru")}
+                onClick={() => chooseLang("ru")}
               >
                 RU
               </button>
@@ -80,7 +94,7 @@ export function HomePage({ visualStatic }: HomePageProps) {
               <button
                 type="button"
                 aria-pressed={lang === "en"}
-                onClick={() => setLang("en")}
+                onClick={() => chooseLang("en")}
               >
                 EN
               </button>

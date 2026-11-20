@@ -28,7 +28,7 @@ export const copy = {
     langGroup: "Language",
     headline: ["The complex", "should be simple."],
     philosophyLabel: "Philosophy",
-    philosophy: ["We stay with the complexity", "until the solution is clear."],
+    philosophy: ["We work through complexity —", "until the solution is clear."],
     aboutTitle: "About",
     aboutLead: "A1Soft",
     about: [
