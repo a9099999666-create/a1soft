@@ -19,6 +19,10 @@ npm run dev
 
 Open the printed local URL. Add `?visual=static` to freeze the hero.
 
+## Deploy
+
+Production is **Vercel**, same as the other Next.js sites. Push `main` to GitHub; Vercel builds from `vercel.json`.
+
 ## Stack
 
 Next.js, TypeScript, Tailwind, shadcn/ui. Inter is loaded from a local WOFF2 file.
