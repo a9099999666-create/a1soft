@@ -42,14 +42,14 @@ export function Backdrop({ live, label }: BackdropProps) {
           loop
           playsInline
           preload="auto"
-          poster="/visuals/hero-poster.png"
+          poster="/visuals/hero-poster.png?v=signal"
         >
-          <source src="/visuals/hero-loop.mp4" type="video/mp4" />
+          <source src="/visuals/hero-loop.mp4?v=signal" type="video/mp4" />
         </video>
       ) : (
         <Image
           className="backdrop-media"
-          src="/visuals/hero-poster.png"
+          src="/visuals/hero-poster.png?v=signal"
           alt=""
           fill
           sizes="100vw"
