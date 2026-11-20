@@ -18,7 +18,7 @@ export const copy = {
     ],
     contactTitle: "Контакты",
     contactLead: "Написать нам",
-    footer: "A1Soft",
+    footer: "A1Soft · Основана в 2010 году · © 2010–2026 · Все права защищены.",
     visualLabel: "Схождение сигнала",
   },
   en: {
@@ -38,7 +38,7 @@ export const copy = {
     ],
     contactTitle: "Contact",
     contactLead: "Write to us",
-    footer: "A1Soft",
+    footer: "A1Soft · Founded in 2010 · © 2010–2026 · All rights reserved.",
     visualLabel: "Signal convergence",
   },
 } as const;
