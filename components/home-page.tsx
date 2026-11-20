@@ -11,7 +11,7 @@ type HomePageProps = {
 };
 
 export function HomePage({ visualStatic }: HomePageProps) {
-  const [lang, setLang] = useState<Lang>("ru");
+  const [lang, setLang] = useState<Lang>("en");
   const [reduceMotion, setReduceMotion] = useState(false);
   const [motionReady, setMotionReady] = useState(false);
   const [scrolled, setScrolled] = useState(false);

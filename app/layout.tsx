@@ -12,7 +12,7 @@ const inter = localFont({
 export const metadata: Metadata = {
   title: "A1Soft",
   description:
-    "Сложное должно быть простым. Международная команда. Собственные продукты в программной разработке и искусственном интеллекте.",
+    "The complex should be simple. An international team. Our own products in software development and artificial intelligence.",
   applicationName: "A1Soft",
 };
 
@@ -25,7 +25,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
-      lang="ru"
+      lang="en"
       className={`${inter.className} ${inter.variable} h-full antialiased`}
     >
       <body id="top" className="min-h-full">
